@@ -24,114 +24,53 @@ namespace PrjColorBall
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var contador = 0;
-            var Corzinha = new Color[6];
-            var nomeCorzinha = new String[6];
-            var randomico = new Random();
+
             var nomedocomponente = "";
-            var ordenacaobolas = new int[20];
+            var Corzinha = new Color[6];
+            var ContagemdasBolas = new int[6];
+            var OrdenacaoBolas = new int[20];
+            var randomico = new Random();
 
             /// Cria um array com os valores referentes 
             /// as cores
-            Corzinha[contador] = Color.Red;
-            nomeCorzinha[contador] = "Vermelho";
-            contador += 1;
-            Corzinha[contador] = Color.Green;
-            nomeCorzinha[contador] = "Verde";
-            contador += 1;
-            Corzinha[contador] = Color.Purple;
-            nomeCorzinha[contador] = "Roxo";
-            contador += 1;
-            Corzinha[contador] = Color.Blue;
-            nomeCorzinha[contador] = "Azul";
-            contador += 1;
-            Corzinha[contador] = Color.Yellow;
-            nomeCorzinha[contador] = "Amarelo";
-            contador += 1;
-            Corzinha[contador] = Color.Pink;
-            nomeCorzinha[contador] = "Rosa";
-            
+            Corzinha[0] = Color.Red;
+            Corzinha[1] = Color.Green;
+            Corzinha[2] = Color.Purple;
+            Corzinha[3] = Color.Blue;
+            Corzinha[4] = Color.Yellow;
+            Corzinha[5] = Color.Pink;
+            /// 
             for (int i = 0; i < 6; i++)
             {
-                nomedocomponente = "Quadrado00"+Convert.ToString(i+1); ;
+                nomedocomponente = "Quadrado00" + Convert.ToString(i + 1); ;
                 (Controls[nomedocomponente] as Panel).BackColor = Corzinha[i];
             }
-            contador = 0;
 
-            listacores.Text = "";
-            
             for (int i = 0; i < 20; i++)
             {
-                if ((i+1) <= 9) 
-                 {
-                    nomedocomponente = "Bola0" + Convert.ToString(i+1);
-                 }
+                if ((i + 1) < 10)
+                {
+                    nomedocomponente = "Bola0" + Convert.ToString(i + 1);
+                }
                 else
                 {
-                    nomedocomponente = "Bola" + Convert.ToString(i+1);
+                    nomedocomponente = "Bola" + Convert.ToString(i + 1);
                 };
-                ordenacaobolas[i] = randomico.Next(0, 5);
-                (Controls[nomedocomponente] as Panel).BackColor = Corzinha[ordenacaobolas[i]];
+
+                OrdenacaoBolas[i] = randomico.Next(0,5);
+                (Controls[nomedocomponente] as Panel).BackColor = Corzinha[OrdenacaoBolas[i]];
+                ContagemdasBolas[OrdenacaoBolas[i]]++;
             }
 
-            int vermelho,roxo,verde,azul,amarelo,rosa = 0;
+            label1.Text = Convert.ToString(ContagemdasBolas[0]);
+            label2.Text = Convert.ToString(ContagemdasBolas[1]);
+            label3.Text = Convert.ToString(ContagemdasBolas[2]);
+            label4.Text = Convert.ToString(ContagemdasBolas[3]);
+            label5.Text = Convert.ToString(ContagemdasBolas[4]);
+            label6.Text = Convert.ToString(ContagemdasBolas[5]);
 
-            int caseswitch = 0;
 
-            for (int i = 0; i < 20; i++)
-            {
-                caseswitch = (ordenacaobolas[i] + 1);
-                switch (caseswitch)
-                {
-                    case 1:
-                        vermelho =+ 1;
-                        break;
-                    case 2: 
-                        verde =+ 1;
-                        break;
-                    case 3: 
-                        roxo =+ 1;
-                        break;
-                    case 4: 
-                        azul =+ 1;
-                        break;
-                    case 5: 
-                        amarelo =+ 1;
-                        break;
-                    case 6: 
-                        rosa =+ 1;
-                        break;
-                }
-            }
-        }
 
-        private string tostring(int i)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Bola19_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Bola18_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Bola17_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Bola20_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Bola16_Paint(object sender, PaintEventArgs e)
-        {
 
         }
     }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.listacores = new System.Windows.Forms.RichTextBox();
             this.Quadrado001 = new System.Windows.Forms.Panel();
             this.Quadrado002 = new System.Windows.Forms.Panel();
             this.Quadrado003 = new System.Windows.Forms.Panel();
@@ -56,6 +55,12 @@
             this.Bola18 = new System.Windows.Forms.Panel();
             this.Bola17 = new System.Windows.Forms.Panel();
             this.Bola16 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -67,14 +72,6 @@
             this.button1.Text = "Inicio do Jogo";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // listacores
-            // 
-            this.listacores.Location = new System.Drawing.Point(161, 12);
-            this.listacores.Name = "listacores";
-            this.listacores.Size = new System.Drawing.Size(325, 37);
-            this.listacores.TabIndex = 1;
-            this.listacores.Text = "";
             // 
             // Quadrado001
             // 
@@ -229,7 +226,6 @@
             this.Bola20.Name = "Bola20";
             this.Bola20.Size = new System.Drawing.Size(29, 20);
             this.Bola20.TabIndex = 17;
-            this.Bola20.Paint += new System.Windows.Forms.PaintEventHandler(this.Bola20_Paint);
             // 
             // Bola19
             // 
@@ -237,7 +233,6 @@
             this.Bola19.Name = "Bola19";
             this.Bola19.Size = new System.Drawing.Size(29, 20);
             this.Bola19.TabIndex = 16;
-            this.Bola19.Paint += new System.Windows.Forms.PaintEventHandler(this.Bola19_Paint);
             // 
             // Bola18
             // 
@@ -245,7 +240,6 @@
             this.Bola18.Name = "Bola18";
             this.Bola18.Size = new System.Drawing.Size(29, 20);
             this.Bola18.TabIndex = 15;
-            this.Bola18.Paint += new System.Windows.Forms.PaintEventHandler(this.Bola18_Paint);
             // 
             // Bola17
             // 
@@ -253,7 +247,6 @@
             this.Bola17.Name = "Bola17";
             this.Bola17.Size = new System.Drawing.Size(29, 20);
             this.Bola17.TabIndex = 14;
-            this.Bola17.Paint += new System.Windows.Forms.PaintEventHandler(this.Bola17_Paint);
             // 
             // Bola16
             // 
@@ -261,13 +254,72 @@
             this.Bola16.Name = "Bola16";
             this.Bola16.Size = new System.Drawing.Size(29, 20);
             this.Bola16.TabIndex = 13;
-            this.Bola16.Paint += new System.Windows.Forms.PaintEventHandler(this.Bola16_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(74, 197);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(129, 197);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(184, 197);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(239, 197);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(294, 197);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(349, 197);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "label6";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Bola20);
             this.Controls.Add(this.Bola15);
             this.Controls.Add(this.Bola19);
@@ -294,18 +346,17 @@
             this.Controls.Add(this.Quadrado003);
             this.Controls.Add(this.Quadrado002);
             this.Controls.Add(this.Quadrado001);
-            this.Controls.Add(this.listacores);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox listacores;
         private System.Windows.Forms.Panel Quadrado001;
         private System.Windows.Forms.Panel Quadrado002;
         private System.Windows.Forms.Panel Quadrado003;
@@ -332,6 +383,12 @@
         private System.Windows.Forms.Panel Bola18;
         private System.Windows.Forms.Panel Bola17;
         private System.Windows.Forms.Panel Bola16;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 
